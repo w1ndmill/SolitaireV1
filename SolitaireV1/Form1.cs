@@ -74,7 +74,6 @@ namespace SolitaireV1
 
             if (dragItem == null)
             {
-                //RANDOM COMMENT
                 return;
             }
 
