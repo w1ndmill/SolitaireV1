@@ -53,25 +53,26 @@ namespace SolitaireV1
 
         Control dragItem = null;
 
-        private void label4_MouseDown(object sender, MouseEventArgs e)
+        private void label_MouseDown(object sender, MouseEventArgs e)
         {
-            dragItem = label4;
+            var clickLbl = (Label)sender;
+
+            clickLbl.BringToFront();
+
+            dragItem = clickLbl;
 
             var relativePoint = this.PointToClient(Cursor.Position);
 
             xOriginal = relativePoint.X;
             yOriginal = relativePoint.Y;
 
-            xOffset_Inner = xOriginal - label4.Location.X;
+            xOffset_Inner = xOriginal - clickLbl.Location.X;
 
-            yOffset_Inner = yOriginal - label4.Location.Y;
-
+            yOffset_Inner = yOriginal - clickLbl.Location.Y;
         }
 
-
-        private void label4_MouseMove(object sender, MouseEventArgs e)
+        private void label_MouseMove(object sender, MouseEventArgs e)
         {
-
             if (dragItem == null)
             {
                 return;
@@ -82,9 +83,9 @@ namespace SolitaireV1
             //left border AND dragging left
             if ((Cursor.Position.X < this.Location.X + 50 && relativePoint.X < xOriginal) ||
                 //right border AND dragging right
-                (Cursor.Position.X > this.Location.X + this.Width - 50 && relativePoint.X > xOriginal) || 
+                (Cursor.Position.X > this.Location.X + this.Width - 50 && relativePoint.X > xOriginal) ||
                 //top border and dragging up
-                (Cursor.Position.Y < this.Location.Y + 50 && relativePoint.Y < yOriginal) || 
+                (Cursor.Position.Y < this.Location.Y + 50 && relativePoint.Y < yOriginal) ||
                 //bottom border and dragging down
                 (Cursor.Position.Y > this.Location.Y + this.Height - 50 && relativePoint.Y > yOriginal))
             {
@@ -92,7 +93,6 @@ namespace SolitaireV1
                 return;
             }
 
-            
 
             var newX = relativePoint.X - xOffset_Inner;
             var newY = relativePoint.Y - yOffset_Inner;
@@ -100,11 +100,9 @@ namespace SolitaireV1
             dragItem.Location = new Point(newX, newY);
         }
 
-
-        private void label4_MouseUp(object sender, MouseEventArgs e)
+        private void label_MouseUp(object sender, MouseEventArgs e)
         {
             dragItem = null;
         }
-
     }
 }

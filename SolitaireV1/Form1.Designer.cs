@@ -68,6 +68,9 @@
             this.label1.Size = new System.Drawing.Size(137, 175);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            this.label1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.label_MouseUp);
             // 
             // label2
             // 
@@ -80,6 +83,9 @@
             this.label2.Size = new System.Drawing.Size(137, 175);
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label_MouseDown);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            this.label2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.label_MouseUp);
             // 
             // label3
             // 
@@ -92,21 +98,24 @@
             this.label3.Size = new System.Drawing.Size(137, 175);
             this.label3.TabIndex = 4;
             this.label3.Text = "label3";
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label_MouseDown);
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            this.label3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.label_MouseUp);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Location = new System.Drawing.Point(634, 269);
+            this.label4.Location = new System.Drawing.Point(824, 274);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(50, 10, 50, 150);
             this.label4.Size = new System.Drawing.Size(137, 175);
             this.label4.TabIndex = 5;
             this.label4.Text = "label4";
-            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label4_MouseDown);
-            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label4_MouseMove);
-            this.label4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.label4_MouseUp);
+            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label_MouseDown);
+            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label_MouseMove);
+            this.label4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.label_MouseUp);
             // 
             // Form1
             // 
